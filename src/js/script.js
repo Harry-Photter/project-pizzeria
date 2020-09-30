@@ -62,8 +62,19 @@
 
   const app = {
     initMenu: function () {
-      const testProduct = new Product();
-      console.log('testProduct:', testProduct);
+      const thisApp = this;
+
+      console.log('thisApp.data:', thisApp.data);
+
+      for(let productData in thisApp.data.products){
+        new Product(productData, thisApp.data.products[productData]);
+      }
+    },
+
+    initData: function(){
+      const thisApp = this;
+  
+      thisApp.data = dataSource;
     },
 
     init: function () {
@@ -74,10 +85,10 @@
       console.log('settings:', settings);
       console.log('templates:', templates);
 
+      thisApp.initData();
       thisApp.initMenu();
     },
   };
-
 
   app.init();
 }
