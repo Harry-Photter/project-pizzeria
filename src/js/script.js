@@ -289,13 +289,13 @@
       });
       console.log('input', thisWidget.input);
 
-      thisWidget.linkDecrease.addEventListener('change', function (event) {
+      thisWidget.linkDecrease.addEventListener('click', function (event) {
         event.preventDefault();
         thisWidget.setValue(thisWidget.value - 1);
       });
       console.log('linkDescrease', thisWidget.linkDecrease);
 
-      thisWidget.linkIncrease.addEventListener('change', function (event) {
+      thisWidget.linkIncrease.addEventListener('click', function (event) {
         event.preventDefault();
         thisWidget.setValue(thisWidget.value + 1);
       });
