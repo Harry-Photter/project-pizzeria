@@ -45,6 +45,9 @@ dataSource.products = {
       '<img class="toppings-greenPeppers" src="images/pizza/green-peppers.svg">',
       '<img class="toppings-mushrooms" src="images/pizza/mushrooms.svg">',
       '<img class="toppings-basil" src="images/pizza/basil.svg">',
+      '<img class="toppings-bacon" src="images/pizza/bacon.svg">',
+      '<img class="toppings-corn" src="images/pizza/corn.svg">',
+      '<img class="toppings-pineapple" src="images/pizza/pineapple.svg">',
     ],
     params: {
       sauce: {
@@ -65,6 +68,9 @@ dataSource.products = {
           mushrooms: {label: 'Mushrooms', price: 2, default: true},
           basil: {label: 'Fresh basil', price: 2, default: true},
           salami: {label: 'Salami', price: 3},
+          bacon: {label: 'Bacon', price: 3},
+          corn: {label: 'Corn', price: 2},
+          pineapple: {label: 'Pineapple', price: 3},
         },
       },
       crust: {
