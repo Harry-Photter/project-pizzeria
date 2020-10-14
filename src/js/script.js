@@ -315,7 +315,7 @@
 
       /* TODO: Add validation */
 
-      if (newValue != settings.amountWidget.defaultValue && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) {
+      if (newValue != thisWidget.value && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) {
         thisWidget.value = newValue;
         thisWidget.announce();
       }
@@ -466,7 +466,6 @@
       thisCartProduct.getElements(element);
       thisCartProduct.initAmountWidget();
       thisCartProduct.initActions();
-      thisCartProduct.remove();
 
     }
 
@@ -503,7 +502,7 @@
         bubbles: true,
         detail: {
           cartProduct: thisCartProduct,
-        },
+        }
       });
 
       thisCartProduct.dom.wrapper.dispatchEvent(event);
@@ -512,10 +511,10 @@
     initActions() {
       const thisCartProduct = this;
 
-      thisCartProduct.dom.edit.addEventListener = ('click', function (event) {
+      thisCartProduct.dom.edit.addEventListener('click', function (event) {
         event.preventDefault();
       });
-      thisCartProduct.dom.remove.addEventListener = ('click', function (event) {
+      thisCartProduct.dom.remove.addEventListener('click', function (event) {
         event.preventDefault();
         thisCartProduct.remove();
         console.log('remove', thisCartProduct.remove);
