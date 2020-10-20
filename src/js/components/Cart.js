@@ -11,7 +11,7 @@ class Cart {
 
     thisCart.getElements(element);
     thisCart.initActions(element);
-    thisCart.deliveryFee = settings.cart.defaultDeliveryFree;
+    thisCart.deliveryFee = settings.cart.defaultDeliveryFee;
   }
 
   getElements(element) {
