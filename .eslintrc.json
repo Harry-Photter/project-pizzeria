@@ -28,5 +28,10 @@
         "no-console": [
             "off"
         ]
+    },
+    "globals": {
+      "Handlebars": true,
+      "flatpickr": true,
+      "rangeSlider": true
     }
 }
