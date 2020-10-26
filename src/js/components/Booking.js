@@ -137,6 +137,7 @@ class Booking {
 
     for (let table of thisBooking.dom.tables) {
       let tableId = table.getAttribute(settings.booking.tableIdAttribute);
+
       if (!isNaN(tableId)) {
         tableId = parseInt(tableId);
       }
@@ -150,8 +151,16 @@ class Booking {
       } else {
         table.classList.remove(classNames.booking.tableBooked);
       }
-    }
 
+      if (
+        !table.classList.contains(classNames.booking.tableBooked)
+      ) {
+        table.addEventListener('click', function (event) {
+          event.preventDefault();
+          table.classList.toggle(classNames.booking.loading);
+        });
+      }
+    }
   }
 
   render(bookingWidgetContainer) {
