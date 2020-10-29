@@ -34,6 +34,8 @@ class DatePicker extends BaseWidget {
       ],
       onChange: function (selectedDates, dateStr) {
         thisWidget.value = dateStr;
+
+        console.log(thisWidget.value);
       },
     });
   }
@@ -41,6 +43,11 @@ class DatePicker extends BaseWidget {
   parseValue(value) {
     return value;
   }
+
+  isValid(){
+    return true;
+  }
+
 
   renderValue() { }
 
