@@ -1,5 +1,5 @@
 .box-wrapper {
-  margin: 42px auto;
+  margin: 42px auto 0 auto;
   padding: 72px 48px;
   background: rgb(255, 255, 255);
 }
@@ -19,27 +19,27 @@
 }
 
 .link-wrapper a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .link-wrapper p {
-	opacity:  0%;
-	margin: 0;
+  opacity: 0%;
+  margin: 0;
   transition: $transition;
 }
 
 .link-wrapper:hover p {
-	opacity: 1;
-	transform: translateY(-30px);
+  opacity: 1;
+  transform: translateY(-30px);
 }
 
 .link-wrapper h3 {
-	transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 .link-wrapper h3:hover {
-	transform: translateY(-12px);
+  transform: translateY(-12px);
 }
 
 .box-order {
@@ -47,7 +47,7 @@
   margin-right: 3px;
 }
 
-.box-booking{
+.box-booking {
   background-image: url("https://i.postimg.cc/fybG2nFZ/pizza-2.jpg");
   margin-left: 3px;
 }
@@ -62,7 +62,6 @@
   color: white;
 }
 
-
 .box-wrapper h3 {
   line-height: 100px;
   margin: 0;
@@ -76,8 +75,47 @@
 }
 
 .box-info h4 {
-	margin: 0;
-	padding: 0;
-	transform: translateY(-28px);
+  margin: 0;
+  padding: 0;
+  transform: translateY(-28px);
   font-weight: 300;
+}
+
+
+/* external css: flickity.css */
+
+.carousel-wrapper {
+  display: flex;
+  margin: 0 auto;
+  padding: 72px 48px;
+  background: rgb(255, 255, 255);
+}
+
+.carousel-cell {
+  display: flex;
+  flex: 0 0 50%;
+  height: 193px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.image img {
+  max-width: 193px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: $radius;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+}
+
+.flickity-page-dots {
+  bottom: -50px;
+  text-align: left;
+  margin-left: 10%;
 }

@@ -30,6 +30,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "flickity": "^2.2.1",
         "json-server": "^0.16.2"
     },
     "devDependencies": {

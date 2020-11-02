@@ -10,6 +10,7 @@
     rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -64,7 +65,6 @@
       </div>
     </div>
   </header>
-
   <div id="pages">
     <section id="home">
       <div class="container box-wrapper">
@@ -87,6 +87,30 @@
           <h4>TUE-SUN, 12PM - 12AM</h4>
         </div>
       </div>
+      <div class="container carousel-wrapper">
+        <div class="row">
+          <div class="image">
+            <img src="images/page/pizza-3.jpg" alt="pizza">
+          </div>
+          <div class="carousel" data-flickity='{ "contain": true, "autoPlay": true, "wrapAround": true, "prevNextButtons": false }'>
+            <div class="carousel-cell">
+              <h3>Amazing service!</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget eleifend risus, sed fermentum neque. Morbi ac libero sit amet erat feugiat sodales. Suspendisse quis nisi nec dui suscipit molestie vel nec nisi.</p>
+              <h4>Margaret Osborne</h4>
+            </div>
+            <div class="carousel-cell">
+              <h3>I love that taste!</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum lorem, eleifend feugiat luctus id, iaculis nec dui. Suspendisse nec convallis diam, nec vehicula odio.</p>
+              <h4>Ozzy Osborne</h4>
+            </div>
+            <div class="carousel-cell">
+              <h3>Just ok.</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare sapien est, id porttitor nibh volutpat sodales. Nunc dapibus iaculis luctus.</p>
+              <h4>Margaret Tutcher</h4>
+            </div>                  
+          </div>
+        </div>
+      </div>
     </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
@@ -95,7 +119,6 @@
       <div class="booking-wrapper container"></div>
     </section>
   </div>
-
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">
       <h2 class="page__title no-spacing">Book a table</h2>
@@ -161,7 +184,6 @@
       </form>
     </div>
   </script>
-
   <script id="template-cart-product" type="text/x-handlebars-template">
     <li>
       <div class="widget-amount"> <!-- widget-amount -->
@@ -192,7 +214,6 @@
 
   <script id="template-menu-product" type="text/x-handlebars-template">
     <article class="product"> <!-- product -->
-
         <header class="product__header">
           <h3 class="product__name no-spacing">{{ name }} <i class="fas fa-chevron-down product__icon"></i></h3>
           <p class="product__base-price no-spacing">${{ price }}</p>
@@ -265,13 +286,12 @@
             {{/each}}
           </div>
         </div>
-
     </article> <!-- .product -->
   </script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="vendor/range-slider.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 
