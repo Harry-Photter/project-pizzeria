@@ -1,0 +1,83 @@
+.box-wrapper {
+  margin: 42px auto;
+  padding: 72px 48px;
+  background: rgb(255, 255, 255);
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.link-wrapper {
+  height: 120px;
+  width: 100%;
+  border-radius: $radius;
+  text-align: center;
+  background-size: cover;
+}
+
+.link-wrapper a {
+	text-decoration: none;
+	color: white;
+}
+
+.link-wrapper p {
+	opacity:  0%;
+	margin: 0;
+  transition: $transition;
+}
+
+.link-wrapper:hover p {
+	opacity: 1;
+	transform: translateY(-30px);
+}
+
+.link-wrapper h3 {
+	transform: translateY(10px);
+}
+
+.link-wrapper h3:hover {
+	transform: translateY(-12px);
+}
+
+.box-order {
+  background-image: url("https://i.postimg.cc/ZYVZrjg4/pizza-1.jpg");
+  margin-right: 3px;
+}
+
+.box-booking{
+  background-image: url("https://i.postimg.cc/fybG2nFZ/pizza-2.jpg");
+  margin-left: 3px;
+}
+
+.box-info {
+  width: 100%;
+  height: 120px;
+  background-color: $color-main;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 6px;
+  color: white;
+}
+
+
+.box-wrapper h3 {
+  line-height: 100px;
+  margin: 0;
+  transition: $transition;
+  text-decoration: none;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.box-info h4 {
+	margin: 0;
+	padding: 0;
+	transform: translateY(-28px);
+  font-weight: 300;
+}
