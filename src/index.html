@@ -10,7 +10,7 @@
     rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -92,24 +92,94 @@
           <div class="image">
             <img src="images/page/pizza-3.jpg" alt="pizza">
           </div>
-          <div class="carousel" data-flickity='{ "contain": true, "autoPlay": true, "wrapAround": true, "prevNextButtons": false }'>
-            <div class="carousel-cell">
-              <h3>Amazing service!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget eleifend risus, sed fermentum neque. Morbi ac libero sit amet erat feugiat sodales. Suspendisse quis nisi nec dui suscipit molestie vel nec nisi.</p>
-              <h4>Margaret Osborne</h4>
+          
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h3>Amazing service!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget eleifend risus, sed fermentum neque. Morbi ac libero sit amet erat feugiat sodales. Suspendisse quis nisi nec dui suscipit molestie vel nec nisi.</p>
+                <h4>Margaret Osborne</h4>
+              </div>
+              <div class="carousel-item">
+                <h3>I love that taste!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum lorem, eleifend feugiat luctus id, iaculis nec dui. Suspendisse nec convallis diam, nec vehicula odio.</p>
+                <h4>Ozzy Osborne</h4>
+              </div>
+              <div class="carousel-item">
+                <h3>Just ok.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare sapien est, id porttitor nibh volutpat sodales. Nunc dapibus iaculis luctus.</p>
+                <h4>Margaret Tutcher</h4>
+              </div>  
             </div>
-            <div class="carousel-cell">
-              <h3>I love that taste!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum lorem, eleifend feugiat luctus id, iaculis nec dui. Suspendisse nec convallis diam, nec vehicula odio.</p>
-              <h4>Ozzy Osborne</h4>
-            </div>
-            <div class="carousel-cell">
-              <h3>Just ok.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare sapien est, id porttitor nibh volutpat sodales. Nunc dapibus iaculis luctus.</p>
-              <h4>Margaret Tutcher</h4>
-            </div>                  
           </div>
         </div>
+      </div>
+      <div class="container gallery-wrapper">
+          <div class="row">
+            <div class="gallery-image col-sm-4">
+              <div class="picture">
+                <img src="images/page/pizza-4.jpg">
+              </div>
+              <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-image col-sm-4">
+              <div class="picture">
+                <img src="images/page/pizza-5.jpg">
+              </div>
+              <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-image col-sm-4">
+              <div class="picture">
+                <img src="images/page/pizza-6.jpg">
+              </div>
+              <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="gallery-image col-sm-4">
+              <div class="picture">
+                <img src="images/page/pizza-7.jpg">
+              </div>
+              <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-image col-sm-4">
+              <div class="picture">
+                <img src="images/page/pizza-8.jpg">
+              </div>
+              <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-image col-sm-4">
+              <div class="picture">
+                <img src="images/page/pizza-9.jpg">
+              </div>
+              <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+          </div>
+          <a href="#">View more on instagram</a>
       </div>
     </section>
     <section id="order">
@@ -291,7 +361,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="vendor/range-slider.min.js"></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 

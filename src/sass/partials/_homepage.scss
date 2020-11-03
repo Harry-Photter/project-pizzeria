@@ -8,6 +8,8 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: auto;
 }
 
 .link-wrapper {
@@ -79,24 +81,42 @@
   padding: 0;
   transform: translateY(-28px);
   font-weight: 300;
+  font-size: 14px;
 }
 
 
-/* external css: flickity.css */
+// /* external css: flickity.css */
 
 .carousel-wrapper {
   display: flex;
   margin: 0 auto;
   padding: 72px 48px;
   background: rgb(255, 255, 255);
+  justify-content: space-between;
 }
 
-.carousel-cell {
-  display: flex;
-  flex: 0 0 50%;
-  height: 193px;
-  width: 100%;
-  margin: 50px auto;
+.carousel-inner {
+  padding: 0 30px;
+}
+
+.carousel-inner h3 {
+  font-family: $font-text;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.carousel-inner h4 {
+  font-family: $font-text;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
 }
 
 .image img {
@@ -106,16 +126,64 @@
   border-radius: $radius;
 }
 
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  line-height: 200px;
-  font-size: 80px;
+
+
+/* gallery */
+
+.gallery-wrapper {
+  padding: 72px 48px;
+  background: rgb(255, 255, 255);
+  justify-content: space-between;
 }
 
-.flickity-page-dots {
-  bottom: -50px;
-  text-align: left;
-  margin-left: 10%;
+.gallery-image {
+  width: auto;
+  flex: 0 0 33.333%;
+  padding: 0 0 10px 0;
+}
+
+.gallery-image img {
+  height: 200px;
+  width: 194px;
+  object-fit: cover;	  object-fit: cover;
+}
+
+.icons {
+  position: absolute;
+  max-height: 200px;
+  max-width: 194px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  opacity: 0;
+  transition: .5s;
+  color: white;
+  padding: 35px;
+}
+
+.icons:hover {
+  align-content: space-between;
+  opacity: 1;
+}
+
+.icons i {
+  font-size: 25px;
+}
+
+.icons .fa-heart:hover {
+  transition: .2s;
+  transform: scale(1.5);
+  color: red;
+}
+
+.icons .fa-share-alt:hover {
+  transition: .2s;
+  transform: scale(1.5);
+  color: grey;
 }
