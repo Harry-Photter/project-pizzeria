@@ -13,6 +13,12 @@ class Booking {
     thisBooking.render(bookingWidgetContainer);
     thisBooking.initWidgets();
     thisBooking.getData();
+    thisBooking.dom.availabilityRangeSlider = document.querySelector('#availability');
+    thisBooking.open = 12;
+    thisBooking.close = 24;
+    thisBooking.date = '2019-01-01';
+
+
   }
 
   getData() {
@@ -98,6 +104,7 @@ class Booking {
     // console.log('thisBooking.booked', thisBooking.booked);
 
     thisBooking.updateDOM();
+    thisBooking.initTableAvailability();
   }
 
   makeBooked(date, hour, duration, table) {
@@ -120,6 +127,36 @@ class Booking {
     }
   }
 
+  initTableAvailability() {
+    const thisBooking = this;
+
+    console.log(thisBooking.booked);
+
+    const tableAvailability = [];
+    for (let i = thisBooking.open; i < thisBooking.close; i += 0.5) {
+      if (thisBooking.booked[thisBooking.date][i]) {
+        thisBooking.booked[thisBooking.date][i].push[thisBooking.table];
+      } else {
+        thisBooking.booked[thisBooking.date][i] = [];
+      }
+      tableAvailability.push(thisBooking.booked[thisBooking.date][i].length);
+    }
+
+    for (let i = 0; i < tableAvailability.length; i++) {
+      const divRangeSlider = document.createElement('div');
+      divRangeSlider.classList.add('availability-div');
+      if (tableAvailability[i] === 1 || tableAvailability[i] === 2) {
+        divRangeSlider.classList.add('medium');
+      } else if (tableAvailability[i] === 3) {
+        divRangeSlider.classList.add('full');
+      } else {
+        divRangeSlider.classList.add('empty');
+      }
+      thisBooking.dom.availabilityRangeSlider.appendChild(divRangeSlider);
+    }
+  }
+
+
   updateDOM() {
     const thisBooking = this;
     
@@ -140,7 +177,6 @@ class Booking {
         table.classList.remove(classNames.booking.tableActive);
       }
     }
-
 
     let allAvailable = false;
 
